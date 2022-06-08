@@ -1,4 +1,4 @@
-****[//]: # (title: Compatibility guide for Kotlin 1.7)
+[//]: # (title: Compatibility guide for Kotlin 1.7)
 
 _[Keeping the Language Modern](kotlin-evolution.md)_ and _[Comfortable Updates](kotlin-evolution.md)_ are among the fundamental principles in
 Kotlin Language Design. The former says that constructs which obstruct language evolution should be removed, and the
@@ -49,12 +49,12 @@ perspective
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: Kotlin 1.7 will consider the type of safe call result always nullable, even when the receiver of the safe call is non-nullable.
+> **Short summary**: Kotlin 1.7 will consider the type of safe call result always nullable, even when the receiver of the safe call is non-nullable
 >
 > **Deprecation cycle**:
 >
-> - \<1.3: report a warning on unnecessary safe call on non-nullable receivers
-> - 1.6.20: warn additionally that the result of unnecessary safe call will change its type in the next version
+> - \<1.3: report a warning on an unnecessary safe call on non-nullable receivers
+> - 1.6.20: warn additionally that the result of an unnecessary safe call will change its type in the next version
 > - 1.7.0: change the type of safe call result to nullable,  
 > `-XXLanguage:-SafeCallsAreAlwaysNullable` can be used to temporarily revert to the pre-1.7 behavior
 
@@ -67,12 +67,12 @@ perspective
 > **Incompatible change type**: source
 > 
 > **Short summary**: Kotlin will report a compile error when an explicit or implicit super call is delegated 
-> to an _abstract_ member of the superclass, even if there’s a default implementation in a super interface.
+> to an _abstract_ member of the superclass, even if there's a default implementation in a super interface
 >
 > **Deprecation cycle**:
 >
 > - 1.5.20: introduce a warning when non-abstract classes that do not override all abstract members are used
-> - 1.7.0: report an error if a super call if fact accesses an abstract member from a super class
+> - 1.7.0: report an error if a super call, in fact, accesses an abstract member from a superclass
 > - 1.7.0: report an error if the `-Xjvm-default=all` or `-Xjvm-default=all-compatibility` compatibility modes are enabled;
 >   report an error in the progressive mode
 > - \>=1.8.0: report an error in all cases
@@ -86,7 +86,7 @@ perspective
 > **Incompatible change type**: source
 >
 > **Short summary**: Kotlin will prevent declaring public properties having non-public types in a private primary constructor.
-> Accessing such properties from another package could lead to an `IllegalAccessError`.
+> Accessing such properties from another package could lead to an `IllegalAccessError`
 >
 > **Deprecation cycle**:
 >
@@ -219,7 +219,7 @@ perspective
 >
 > - 1.3.0: introduce a warning on such function calls
 > - 1.6.0: raise this warning to an error
-> - 1.7.0: introduce changes to the language grammar, so that `suspend` before `{` is parsed as a keyword
+> - 1.7.0: introduce changes to the language grammar so that `suspend` before `{` is parsed as a keyword
 
 
 ## Standard library
@@ -303,7 +303,7 @@ perspective
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: the class `KotlinGradleSubplugin` will be removed in Kotlin 1.7. Use `KotlinCompilerPluginSupportPlugin` instead.
+> **Short summary**: the class `KotlinGradleSubplugin` will be removed in Kotlin 1.7. Use `KotlinCompilerPluginSupportPlugin` instead
 >
 > **Deprecation cycle**:
 >
