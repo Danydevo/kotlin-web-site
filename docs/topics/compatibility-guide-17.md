@@ -90,7 +90,7 @@ perspective
 >
 > **Deprecation cycle**:
 >
-> - 1.3.20: report a warning on a public property declared in non-public constructor has non-public type
+> - 1.3.20: report a warning on a public property that has a non-public type and is declared in a non-public constructor
 > - 1.6.20: raise this warning to an error in the progressive mode
 > - 1.7.0: raise this warning to an error
 
