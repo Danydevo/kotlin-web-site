@@ -303,7 +303,7 @@ perspective
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: the class `KotlinGradleSubplugin` will be removed in Kotlin 1.7. Use `KotlinCompilerPluginSupportPlugin` instead
+> **Short summary**: the class `KotlinGradleSubplugin` will be removed in Kotlin 1.7. Use the `KotlinCompilerPluginSupportPlugin` instead
 >
 > **Deprecation cycle**:
 >
