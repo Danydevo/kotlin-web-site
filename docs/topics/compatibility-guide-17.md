@@ -221,6 +221,41 @@ perspective
 > - 1.6.0: raise this warning to an error
 > - 1.7.0: introduce changes to the language grammar so that `suspend` before `{` is parsed as a keyword
 
+### Prohibit smart cast on base class property if the base class is from another module
+
+> **Issue**: [KT-52629](https://youtrack.jetbrains.com/issue/KT-52629)
+>
+> **Component**: Core language
+>
+> **Incompatible change type**: source
+>
+> **Short summary**: Kotlin 1.7 will no longer allow smart casts on properties declared in another module 
+> that were erroneously allowed before
+>
+> **Deprecation cycle**:
+>
+> - 1.6.0: report a warning on a smart cast of a property declared in the superclass that is in another module
+> - 1.7.0: raise this warning to an error,  
+> `-XXLanguage:-ProhibitSmartcastsOnPropertyFromAlienBaseClass` can be used to temporarily revert to the pre-1.7 behavior
+
+### Do not neglect meaningful constraints during type inference
+
+> **Issue**: [KT-52668](https://youtrack.jetbrains.com/issue/KT-52668)
+>
+> **Component**: Core language
+>
+> **Incompatible change type**: source
+>
+> **Short summary**: Kotlin 1.4–1.6 mistakenly neglected some type constraints during type inference due to an incorrect optimization.
+> It could allow writing unsound code causing `ClassCastException` at runtime.
+> Kotlin 1.7 takes these constraints into account thus prohibiting the unsound code
+>
+> **Deprecation cycle**:
+>
+> - 1.5.20: report a warning if a type mismatch would happen should all the type inference constraints have been taken into account 
+> - 1.7.0: take all the constraints into account thus raising this warning to an error,  
+> `-XXLanguage:-ProperTypeInferenceConstraintsProcessing` can be used to temporarily revert to the pre-1.7 behavior
+
 
 ## Standard library
 
