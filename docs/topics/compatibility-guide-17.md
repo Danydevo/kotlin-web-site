@@ -378,7 +378,7 @@ perspective
 
 ### Remove kotlin.experimental.coroutines Gradle DSL option and kotlin.coroutines Gradle property
 
-> **Issue**: [KT-50494/](https://youtrack.jetbrains.com/issue/KT-50494)
+> **Issue**: [KT-50494](https://youtrack.jetbrains.com/issue/KT-50494)
 >
 > **Component**: Gradle
 >
