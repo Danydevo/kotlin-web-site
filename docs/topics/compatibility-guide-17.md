@@ -401,7 +401,7 @@ perspective
 >
 > **Deprecation cycle:**
 >
-> - 1.5.20: raise the deprecation level to a warning
+> - 1.5.30: raise the deprecation level to a warning
 > - \> 1.7.0: remove the option
 
 ### Changes in compile tasks
