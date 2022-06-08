@@ -371,3 +371,52 @@ perspective
 > 
 > - 1.6.0: hide the deprecation option
 > - 1.7.0: remove the deprecated option
+
+### Deprecate kotlin.compiler.execution.strategy system property
+
+> **Issue**: [KT-51830](https://youtrack.jetbrains.com/issue/KT-51830)
+>
+> **Component**: Gradle
+>
+> **Incompatible change type**: source
+>
+> **Short summary**: deprecate the `kotlin.compiler.execution.strategy` system property used to choose a compiler execution strategy. 
+> The Gradle property `kotlin.compiler.execution.strategy` or the compile task property `compilerExecutionStrategy` can be used instead
+>
+> **Deprecation cycle:**
+>
+> - 1.7.0: raise the deprecation level to a warning
+> - \> 1.7.0: remove the property
+
+### Remove kotlinOptions.jdkHome compiler option
+
+> **Issue**: [KT-46541](https://youtrack.jetbrains.com/issue/KT-46541)
+>
+> **Component**: Gradle
+>
+> **Incompatible change type**: source
+>
+> **Short summary**: remove the `kotlinOptions.jdkHome` compiler option used to include a custom JDK from the specified location 
+> into the classpath instead of the default `JAVA_HOME`. Use [Java toolchains](gradle.md#gradle-java-toolchains-support) istead
+>
+> **Deprecation cycle:**
+>
+> - 1.5.20: raise the deprecation level to a warning
+> - \> 1.7.0: remove the option
+
+### Changes in compile tasks
+
+> **Issue**: [KT-32805](https://youtrack.jetbrains.com/issue/KT-32805)
+>
+> **Component**: Gradle
+>
+> **Incompatible change type**: source
+>
+> **Short summary**: Kotlin compile tasks no longer inherit the Gradle `AbstractCompile` task and that's why 
+> the `sourceCompatibility` and `targetCompatibility` inputs are no longer available in Kotlin users' scripts. 
+> The `SourceTask.stableSources` input is no longer available. The `sourceFilesExtensions` input was removed. 
+> The deprecated `Gradle destinationDir: File` output was replaced with the `destinationDirectory: DirectoryProperty` output.
+>
+> **Deprecation cycle:**
+>
+> - 1.7.0: inputs are not available, the output is replaced
