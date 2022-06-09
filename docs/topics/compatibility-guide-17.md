@@ -462,7 +462,9 @@ perspective
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: remove the `kotlin2js` and `kotlin-dce-plugin` plugins
+> **Short summary**: remove the `kotlin2js` and `kotlin-dce-plugin` plugins. Instead of `kotlin2js`, use the new `org.jetbrains.kotlin.js` plugin. 
+> Dead code elimination (DCE) works when the Kotlin/JS Gradle plugin is [properly configured](http://javascript-dce.md)
+
 >
 > **Deprecation cycle:**
 >
