@@ -447,7 +447,7 @@ perspective
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: remove the `noStdlib` compiler option. The Gradle plugin uses the `kotlin.stdlib.default.dependency=true` property to control the Kotlin standard library presence
+> **Short summary**: remove the `noStdlib` compiler option. The Gradle plugin uses the `kotlin.stdlib.default.dependency=true` property to control whether the Kotlin standard library is present
 >
 > **Deprecation cycle:**
 >
