@@ -330,15 +330,15 @@ perspective
 
 ## Tools
 
-### Deprecate KotlinGradleSubplugin class
+### Remove KotlinGradleSubplugin class
 
-> **Issue**: [KT-48830](https://youtrack.jetbrains.com/issue/KT-48830)
+> **Issue**: [KT-48831](https://youtrack.jetbrains.com/issue/KT-48831)
 >
 > **Component**: Gradle
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: the class `KotlinGradleSubplugin` will be removed in Kotlin 1.7. Use the `KotlinCompilerPluginSupportPlugin` instead
+> **Short summary**: remove the `KotlinGradleSubplugin` class. Use the `KotlinCompilerPluginSupportPlugin` class instead
 >
 > **Deprecation cycle**:
 >
@@ -468,21 +468,6 @@ perspective
 >
 > - 1.4.0: raise the deprecation level to a warning
 > - 1.7.0: remove the plugins
-
-### Remove KotlinGradleSubplugin class
-
-> **Issue**: [KT-48831](https://youtrack.jetbrains.com/issue/KT-48831)
->
-> **Component**: Gradle
->
-> **Incompatible change type**: source
->
-> **Short summary**: remove the `KotlinGradleSubplugin` class. Use the `KotlinCompilerPluginSupportPlugin` class instead
->
-> **Deprecation cycle**:
->
-> - 1.6.0: raise the deprecation level to an error
-> - 1.7.0: remove the deprecated class
 
 ### Changes in compile tasks
 
