@@ -482,8 +482,9 @@ perspective
 > **Short summary**: Kotlin compile tasks no longer inherit the Gradle `AbstractCompile` task and that's why 
 > the `sourceCompatibility` and `targetCompatibility` inputs are no longer available in Kotlin users' scripts. 
 > The `SourceTask.stableSources` input is no longer available. The `sourceFilesExtensions` input was removed. 
-> The deprecated `Gradle destinationDir: File` output was replaced with the `destinationDirectory: DirectoryProperty` output
+> The deprecated `Gradle destinationDir: File` output was replaced with the `destinationDirectory: DirectoryProperty` output. 
+> The `setClasspath(FileCollection)` and `getClasspath(): FileCollection` methods are deprecated
 >
 > **Deprecation cycle:**
 >
-> - 1.7.0: inputs are not available, the output is replaced
+> - 1.7.0: inputs are not available, the output is replaced, a couple of methods are deprecated
