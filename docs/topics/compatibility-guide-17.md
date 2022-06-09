@@ -234,7 +234,7 @@ perspective
 >
 > **Deprecation cycle**:
 >
-> - 1.6.0: report a warning on a smart cast of a property declared in the superclass that is in another module
+> - 1.6.0: report a warning on a smart cast on a property declared in the superclass located in another module
 > - 1.7.0: raise this warning to an error,  
 > `-XXLanguage:-ProhibitSmartcastsOnPropertyFromAlienBaseClass` can be used to temporarily revert to the pre-1.7 behavior
 
@@ -246,7 +246,7 @@ perspective
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: Kotlin 1.4–1.6 mistakenly neglected some type constraints during type inference due to an incorrect optimization.
+> **Short summary**: Kotlin 1.4−1.6 neglected some type constraints during type inference due to an incorrect optimization.
 > It could allow writing unsound code, causing `ClassCastException` at runtime.
 > Kotlin 1.7 takes these constraints into account, thus prohibiting the unsound code
 >
