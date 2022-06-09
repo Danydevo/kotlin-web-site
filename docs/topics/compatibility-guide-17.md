@@ -447,7 +447,7 @@ perspective
 >
 > **Incompatible change type**: source
 >
-> **Short summary**: remove the `noStdlib` compiler option. Gradle always resolves the Kotlin standard library and adds it to the compiler classpath
+> **Short summary**: remove the `noStdlib` compiler option. The Gradle plugin uses the `kotlin.stdlib.default.dependency=true` property to control the Kotlin standard library presence
 >
 > **Deprecation cycle:**
 >
