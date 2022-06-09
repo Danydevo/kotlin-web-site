@@ -451,7 +451,7 @@ perspective
 >
 > **Deprecation cycle:**
 >
-> - 1.5.30: raise the deprecation level to a warning
+> - 1.5.0: raise the deprecation level to a warning
 > - 1.7.0: remove the option
 
 ### Remove kotlin2js and kotlin-dce-plugin plugins
